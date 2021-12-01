@@ -7,12 +7,20 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+@-ms-viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
 
 
 body{
     background-image: url("bg1.gif") ;
     background-repeat: no-repeat;
-    background-size:1280px 610px ;
+    background-size:100% ;
 }
 
 ::selection{
