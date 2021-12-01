@@ -21,6 +21,7 @@ body{
     background-image: url("bg1.gif") ;
     background-repeat: no-repeat;
     background-size:100% ;
+    
 }
 
 ::selection{
