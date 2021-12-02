@@ -7,15 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@viewport{
-    zoom: 1.0;
-    width: extend-to-zoom;
-}
-@-ms-viewport{
-    zoom: 1.0;
-    width: extend-to-zoom;
-}
-
 
 body{
     background-image: url("bg1.gif") ;
