@@ -24,6 +24,71 @@ audio{
     display: none;
 }
 
+
+
+*:before,
+*:after{
+    padding: o;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.border_box{
+    border: 2px solid rgb(10, 10, 10);
+    height:360px;
+    width: 420px;
+    position:absolute ;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #1c1b29;
+    
+}
+.border_box::before{
+content:"";
+background-image:conic-gradient(
+    #04b0ee 20deg,
+    transparent 120deg
+);
+height: 150%;
+width: 150%;
+position: absolute;
+left: -25%;
+top:-25%;
+animation: rotate 2s infinite linear;
+
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.border_box::after{
+    content: "AWESOME";
+    height: 94%;
+    width: 94%;
+    position: absolute;
+    background:linear-gradient(45deg,red,blue) ;
+    border-radius: 5px;
+    top: 3%;
+    left: 3%;
+    color: #04b0ee;
+    display: grid;
+    place-items: center;
+    
+
+
+}
+
+
+
+
 .start_btn,
 .about_box,
 .info_box,
