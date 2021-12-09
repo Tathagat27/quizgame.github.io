@@ -12,6 +12,7 @@ body{
     background-image: url("bg1.gif") ;
     background-repeat: no-repeat;
     background-size:cover;
+    background-attachment: fixed;
     
 }
 
@@ -39,10 +40,10 @@ audio{
     width: 420px;
     position:absolute ;
     margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right:0;
+    top: 50%;
+    bottom: 50%;
+    left: 0%;
+    right:0%;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     overflow: hidden;
@@ -70,7 +71,7 @@ animation: rotate 2s infinite linear;
 }
 
 .border_box::after{
-    content: "AWESOME";
+    content: "";
     height: 94%;
     width: 94%;
     position: absolute;
@@ -98,7 +99,7 @@ animation: rotate 2s infinite linear;
 .result_box{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%; 
     transform: translate(-50%, -90%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -129,13 +130,14 @@ animation: rotate 2s infinite linear;
     font-size: 25px;
     font-weight: 500;
     color: #007bff;
-    padding: 15px 30px;
+    padding: 13px 28px;
     outline: none;
     border: none;
     border-radius: 5px;
     background: #fff;
     cursor: pointer;
     transition: 0.3s;
+    
 }
 
 .start_btn button:hover{
@@ -214,7 +216,7 @@ animation: rotate 2s infinite linear;
     font-size: 25px;
     font-weight: 500;
     color: #007bff;
-    padding: 13px 50px;
+    padding: 13px 30px;
     outline: none;
     border: none;
     border-radius: 5px;
