@@ -75,7 +75,7 @@ animation: rotate 2s infinite linear;
     height: 94%;
     width: 94%;
     position: absolute;
-    background:linear-gradient(45deg,red,blue) ;
+    background:linear-gradient(40deg,rgb(15, 91, 141),rgb(6, 6, 7)) ;
     border-radius: 5px;
     top: 3%;
     left: 3%;
