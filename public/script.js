@@ -1,25 +1,25 @@
-
-var userScore = 0;
 //selecting all required elements
 const start_btn = document.querySelector(".start_btn button");
 const about_btn = document.querySelector(".about_btn button");
 const about_box = document.querySelector(".about_box");
 const info_box = document.querySelector(".info_box");
-const welcome_box = document.querySelector(".welcome_box");
-const exit_btn = document.querySelector(".buttons .quit");
-const continue_btn = document.querySelector(".buttons .restart");
-const ok_btn = document.querySelector(".buttons .ok");
+const exit_btn = info_box.querySelector(".buttons .quit");
+const continue_btn = info_box.querySelector(".buttons .restart");
+const ok_btn = about_box.querySelector(".buttons .ok");
+const single_btn = document.querySelector(".single_btn button");
+const multi_btn = document.querySelector(".multi_btn button");
 const quiz_box = document.querySelector(".quiz_box");
+const player_box = document.querySelector(".player_box");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-const infoDisplay= document.querySelector('#info')
 
 
 
-welcome_box.classList.add("activeInfo");
+
+
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -42,36 +42,47 @@ ok_btn.onclick = ()=>{
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
+    player_box.classList.add("activePlayer"); //show player box
+}
+single_btn.onclick = ()=>{
+    player_box.classList.remove("activePlayer"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(0); //calling showQestions function
     queCounter(1); //passing 1 parameter to queCounter
     startTimer(15); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
-
 }
 
-
-
-
-
-   
 let timeValue =  15;
 let que_count = 0;
 let que_numb = 1;
-
+let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
 
-
+const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
-
+// if restartQuiz button clicked
+restart_quiz.onclick = ()=>{
+    player_box.classList.add("activePlayer"); //show player box
+    result_box.classList.remove("activeResult"); //hide result box
+    timeValue = 15; 
+    que_count = 0;
+    que_numb = 1;
+    userScore = 0;
+    widthValue = 0;
+    showQuetions(que_count); //calling showQestions function
+    queCounter(que_numb); //passing que_numb value to queCounter
+    clearInterval(counter); //clear counter
+    clearInterval(counterLine); //clear counterLine
+    
+}
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
-    
-    window.location.reload();    //reload the current window
+    window.location.reload(); //reload the current window
 }
 
 const next_btn = document.querySelector("footer .next_btn");
@@ -82,8 +93,6 @@ next_btn.onclick = ()=>{
     if(que_count < questions.length - 1){ //if question count is less than total question length
         que_count++; //increment the que_count value
         que_numb++; //increment the que_numb value
-        timeValue = 15; 
-        widthValue = 0;
         showQuetions(que_count); //calling showQestions function
         queCounter(que_numb); //passing que_numb value to queCounter
         clearInterval(counter); //clear counter
@@ -132,7 +141,7 @@ function optionSelected(answer){
     const allOptions = option_list.children.length; //getting all option items
     
     if(userAns == correcAns){ //if user selected option is equal to array's correct answer
-        userScore += 1*10; //upgrading score value with 10
+        userScore += 1; //upgrading score value with 1
         answer.classList.add("correct"); //adding green color to correct selected option
         answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
         console.log("Correct Answer");
@@ -156,36 +165,25 @@ function optionSelected(answer){
     next_btn.classList.add("show"); //show the next button if user selected any option
 }
 
-
-
 function showResult(){
-    score();
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 30){ // if user scored more than 3
+    if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>and congrats! , You got <p>'+ userScore +'</p> out of <p>'+ questions.length*10 +'</p></span>';
+        let scoreTag = '<span>and congrats! , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
-    else if(userScore > 10){ // if user scored more than 1
-        let scoreTag = '<span>and nice , You got <p>'+ userScore +'</p> out of <p>'+ questions.length*10 +'</p></span>';
+    else if(userScore > 1){ // if user scored more than 1
+        let scoreTag = '<span>and nice , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else{ // if user scored less than 1
-        let scoreTag = '<span>and sorry , You got only <p>'+ userScore +'</p> out of <p>'+ questions.length*10 +'</p></span>';
+        let scoreTag = '<span>and sorry , You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-
 }
-
-
-function score(){
-    console.log(userScore);
-    return userScore;
-}
-
 
 function startTimer(time){
     counter = setInterval(timer, 1000);
