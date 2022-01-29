@@ -35,10 +35,10 @@ let questions = [
   },
     {
     numb: 4,
-    question: "",
+    question: "The full form of SQL is?",
     answer: "Structured Query Language",
     options: [
-      "",
+      "Structured Question Language",
       "Stylesheet Query Language",
       "Statement Question Language",
       "Structured Query Language"
