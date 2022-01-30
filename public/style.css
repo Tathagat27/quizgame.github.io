@@ -222,6 +222,41 @@ h4{
 }
 
 
+.box{
+    border-radius: 2rem;
+    position: absolute;
+    margin-left: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    top: 32%;
+    left: 10%;
+    background:linear-gradient(40deg,rgb(17, 23, 107),rgb(6, 6, 7)) ;
+    transform: translate(-50%, -90%);
+    box-shadow: 0 .4rem .8rem 0 rgb(149, 35, 202), 
+                0 .6rem 2.0rem 0 rgb(27, 139, 214);
+}
+
+.box:hover{
+    border-radius: 2rem;
+    font-size: 2.8rem;
+    font-weight: 500.2;
+    top: 13%;
+    left: -1%;
+    transform: scale(1.05, 1.05);
+    filter: hue-rotate(0deg);
+    transition-delay: .1s,.1s,0s,0s;
+    background:linear-gradient(140deg,rgb(17, 23, 107),rgb(6, 6, 7)) ;
+    box-shadow: 0 .4rem .8rem 0 rgb(149, 35, 202), 
+                0 .6rem 1.0rem 0 rgb(27, 139, 214),
+                0 .6rem 1.0rem 0 rgb(27, 139, 214),
+                0 .6rem 1.0rem 0 rgb(27, 139, 214);
+}
+
+
+
+
+
 .info_box{
     width: 54.0rem;
     background: #fff;

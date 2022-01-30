@@ -43,10 +43,10 @@ async function getuserInfoRealtime(userID){
          if(doc.exists){
             const userInfo = doc.data()
             if(userInfo){
-                userDetails.innerHTML = `
+                userDetails.innerHTML = `<span class="box">
                 <h5 style="color:white;"> Welcome <p style="font-size:35px;font-weight: 800;color:cyan;margin-top:.5rem;">${userInfo.name}</p></h5>
                 <h3 style="color:white;">Your Points : <span style="font-size:35px;font-weight: 800;color:white;margin-top:.5rem;">${userInfo.points}</span></h3>
-                               `
+                 </span>              `
                 x=userInfo.points;
             }
             
