@@ -7,6 +7,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 html{
     font-size: 63.4%;
 }
@@ -34,6 +36,15 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
+
+.logo{
+
+    width:39rem;
+    transform: translate(-3.5rem, -5.5rem);
+    
+}
+
+
 
 .border_box{
     border: 2px solid rgb(10, 10, 10);
