@@ -108,6 +108,8 @@ animation: rotate 2s infinite linear;
     
 }
 
+
+
 .vector{
     width:30rem;
     height:35rem;
@@ -137,13 +139,11 @@ h4{
     font-weight: 500;
 }
 
-.start_btn,
+
 .about_box,
 .info_box,
 .welcome_box,
-.single_btn,
 .quiz_box,
-.player_box,
 .result_box{
     
     position: absolute;
@@ -154,8 +154,18 @@ h4{
                 0 .6rem 2.0rem 0 rgba(0, 0, 0, 0.19);
 }
 
-.about_btn,
-.multi_btn{
+.start_btn{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 
+                0 .6rem 2.0rem 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.about_btn{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -179,10 +189,10 @@ h4{
     font-size: 2.5rem;
     font-weight: 500;
     color: #007bff;
-    padding: 1.5rem 3.0rem;
+    padding: 1.3rem 2.75rem;
     outline: none;
     border: none;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background: #fff;
     cursor: pointer;
     transition: 0.3s;
@@ -236,14 +246,16 @@ h4{
 .box{
     border-radius: 2rem;
     position: absolute;
-    margin-left: 4rem;
+    height:140px;
+    width: 300px;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1rem;
-    top: 32%;
-    left: 10%;
+    top: 8rem;
+    left: 2rem;
+    bottom: 0;
+    right: 0;
     background:linear-gradient(40deg,rgb(17, 23, 107),rgb(6, 6, 7)) ;
-    transform: translate(-50%, -90%);
     box-shadow: 0 .4rem .8rem 0 rgb(149, 35, 202), 
                 0 .6rem 2.0rem 0 rgb(27, 139, 214);
 }
@@ -252,8 +264,10 @@ h4{
     border-radius: 2rem;
     font-size: 2.8rem;
     font-weight: 500.2;
-    top: 13%;
-    left: -1%;
+    top: 11rem;
+    left: 2.7rem;
+    bottom: 0;
+    right: 0;
     transform: scale(1.05, 1.05);
     filter: hue-rotate(0deg);
     transition-delay: .1s,.1s,0s,0s;
@@ -786,9 +800,60 @@ footer button.show{
         background-repeat: no-repeat;
         
     }
+
+.box{
+    position: absolute;
+    top: 14%;
+    bottom: 0;
+    left: 30%;
+    right: 0;
+    
 }
 
-@media(max-width:600px){
+.border_box{
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.about_box,
+.info_box,
+.welcome_box,
+.quiz_box,
+.result_box{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 210%);
+    
+}
+
+.start_btn{
+    position: absolute;
+    top: 68.5%;
+    left: 50%;
+   
+
+}
+
+.about_btn{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+   
+   
+}
+
+
+
+
+}
+
+@media(max-width:520px){
     html{
         font-size: 10px;
     }
@@ -797,6 +862,58 @@ footer button.show{
         background-repeat: no-repeat;
         
     }
+
+    .box{
+        position: absolute;
+        top: 14%;
+        bottom: 0;
+        left: 30%;
+        right: 0;
+        
+}
+
+
+    .border_box{
+        position: absolute;
+        top: 40%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    
+    .about_box,
+    .info_box,
+    .welcome_box,
+    .quiz_box,
+    .result_box{
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 210%);
+        
+    }
+
+    .start_btn{
+        position: absolute;
+        top: 68%;
+        left: 50%;
+        margin-left: 2.5rem;
+
+    }
+    
+    .about_btn{
+        position: absolute;
+        top: 69%;
+        left: 50%;
+        margin-left: 2.5rem;
+        
+    
+    }
+
+
+
 }
 
 @media(min-width: 0){
