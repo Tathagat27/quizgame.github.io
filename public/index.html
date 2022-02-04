@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game</title>
     
-    <link rel="shortcut icon" href="logo.svg" type="image/svg"/>
+    <link rel="shortcut icon" href="Q.png" type="image/png"/>
 
 
     <!-- FontAweome CDN Link for Icons -->
@@ -38,9 +38,9 @@
     <div class="modal-content">
       <h4>Signup</h4>
       <form autocomplete="off" onsubmit="signup(event)">
-        <input type="text" id="userNameSign" placeholder="username" />
-        <input type="email" id="signupEmail" placeholder="email" />
-        <input type="password" id="signupPassword" placeholder="password" />
+        <input type="text" id="userNameSign" placeholder="username" required />
+        <input type="email" id="signupEmail" placeholder="email" required/>
+        <input type="password" id="signupPassword" placeholder="password" required/>
         <button class="btn waves-effect #fbc02d orange darken-2" type="submit">submit</button>   
       </form>
       <h6 style="margin-left:3.3rem;">or </h6>
@@ -56,8 +56,8 @@
       <h4>Login</h4>
       <form autocomplete="off" onsubmit="login(event)">
         
-        <input type="email" id="loginEmail" placeholder="email" />
-        <input type="password" id="loginPassword" placeholder="password" />
+        <input type="email" id="loginEmail" placeholder="email" required/>
+        <input type="password" id="loginPassword" placeholder="password" required/>
         <button class="btn waves-effect #fbc02d orange darken-2" type="submit">submit</button>   
       </form>
       <h6 style="margin-left:3.3rem;">or </h6>

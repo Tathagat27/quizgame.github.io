@@ -111,8 +111,9 @@ animation: rotate 2s infinite linear;
 
 
 .vector{
-    width:30rem;
-    height:35rem;
+    width:60%;
+    height:65%;
+    align-content: flex-end;
 }
 
 .trophy{
@@ -344,8 +345,8 @@ h4{
 }
 
 .welcome_box{
-    width: 54.0rem;
-    height: 43rem;
+    width: 62.0%;
+    height: 78%;
     background: #fff;
     border-radius: .5rem;
     position:absolute;
@@ -359,15 +360,15 @@ h4{
 }
 
 .welcome_box .welcome-title{
-    height: 9.0rem;
-    width: 54rem;
-    
-    display: flex;
+    height: 19.0%;
+    width: 73%;
+    overflow: auto;
     align-items: center;
-    margin-left: 10rem;
+    margin-left: 15%;
+    padding: 1%;
     border-radius: .5rem .5rem 0 0;
-    font-size: 3.0rem;
-    font-weight: 800;
+    font-size: 4.6vh;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -377,7 +378,7 @@ h4{
 
 .welcome_box .welcome-list .info{
     margin: .5rem 0;
-    font-size: 1.7rem;
+    font-size: 17%;
 }
 
 .welcome_box .welcome-list .welcome span{
@@ -789,7 +790,7 @@ footer button.show{
     background: #007bff;
 }
 
-@media(max-width:950px){
+/* @media(max-width:950px){
     html{
         font-size: 10px;
     }
@@ -930,4 +931,4 @@ footer button.show{
 html{
     font-size: 10px;
 }
-}
+} */
