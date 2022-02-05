@@ -39,9 +39,11 @@ body{
 }
 
 .logo{
-    width: 30%;
-    transform: translate(1.5rem, 1.5rem);
-    height: 4rem;
+    width: 23%;
+    height: 75%;
+    margin-top: 1%;
+    margin-left: 0.8%;
+    padding: 0%;
 }
 
 
@@ -105,15 +107,14 @@ animation: rotate 2s infinite linear;
 
 .nav{
     background-color: rgba(255, 255, 255, 0.199);
-    
 }
 
 
 
 .vector{
-    width:60%;
-    height:65%;
-    align-content: flex-end;
+    width:65%;
+    height:70%;
+    
 }
 
 .trophy{
@@ -361,13 +362,8 @@ h4{
 
 .welcome_box .welcome-title{
     height: 19.0%;
-    width: 73%;
-    overflow: auto;
-    align-items: center;
-    margin-left: 15%;
-    padding: 1%;
-    border-radius: .5rem .5rem 0 0;
-    font-size: 4.6vh;
+    padding: 2%;
+    font-size: 4.5vh;
     font-weight: 700;
     text-align: center;
 }
@@ -790,7 +786,7 @@ footer button.show{
     background: #007bff;
 }
 
-/* @media(max-width:950px){
+@media(max-width:950px){
     html{
         font-size: 10px;
     }
@@ -931,4 +927,4 @@ footer button.show{
 html{
     font-size: 10px;
 }
-} */
+}
